@@ -1,0 +1,16 @@
+.highlight {
+    background-color: #9f5f91;
+  }
+  
+  .navbar-brand {
+    color: #000080;
+    background-color: antiquewhite;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #572c57;
+  }
+  
+  .navbar-nav .nav-link.active {
+    color: #e26972;
+  }
