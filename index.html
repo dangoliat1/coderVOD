@@ -1,72 +1,173 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
-    <!-- title and favicon -->
-    <title>Fisioterapia Maral</title>
-    <link rel="shortcut icon" href="" type="image/x-icon" />
-
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-    <!-- Bootstrap CSS v5.3  and bs-Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
-
-    <!-- css custom styles -->
-    <link rel="stylesheet" href="./css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JavaScript Fundamentals – Part 1</title>
+    <script src="./main.js"></script>
+    <style>
+      body {
+        height: 100%;
+        text-align: center;
+        background: linear-gradient(to top left, #e4e724, #2849b4);
+        background-size:cover;
+        background-position: center;
+      }
+      h1 {
+        font-family: sans-serif;
+        font-size: 50px;
+        line-height: 1;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+      h2 {
+        font-family: sans-serif;
+        font-size: 20px;
+        line-height: 1.3;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        color: darkred;
+      }
+      div {
+        width: 75%;
+        font-family: sans-serif;
+        font-size: 16px;
+        line-height: 1.3;
+        width: 100%;
+        padding-right: 70px;
+        padding-left: 10px;
+        text-align: left;
+        color: black;
+      }
+      .opcion {
+        font-size: 19px;
+        color: blue;
+      }
+      .vod{
+        font-family: sans-serif;
+        font-size: 30px;
+        line-height: 1;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+    </style>
   </head>
-
   <body>
-    <section>
+    <h1>PreEntrega 2 – JavaScript</h1>
+    <h2 class="vod">Academia deportiva</h2>
+    <h2 class="vod">Daniel Vargas Osorio</h2>
+    <div>
+      <h2>Descripción del programa:</h2>
+      <p>
+        Se tiene una academia deportiva, en este caso una Academia de Voleibol
+        que atiende a jóvenes de entre 12 y 19 años, es decir jóvenes
+        nacidos entre el 2004 y 2011. El programa trabaja una pequeña parte
+        administrativa de la Academia. <br>
+      </p>
+      <h2>--VER RESULTADOS EN CONSOLA--</h2>
+      <p>
+        <strong>MENU PRINCIPAL</strong> <br />
+        Se inicializa un MENU en el que hay 4 opciones: <br />
+        <span class="opcion">1 </span
+        ><strong>registrar nuevo jugador: </strong> Da de alta a un nuevo
+        jugador que se integra a la academia de voleibol. <br />
+        <span class="opcion">2 </span><strong>armar Equipo: </strong>Se conforma
+        un equipo con el padrón de jugadores con el que se cuenta actualmente y
+        con los nuevos jugadores registrados si es que ingresaron sus datos
+        correctamente. <br />
+        <span class="opcion">3 </span
+        ><strong>consultar Padrón de Jugador: </strong>Son opciones para filtrar
+        el padrón de jugadores y ver con la gente que se cuenta por rama,
+        categoría, forma de pago o el total del padrón. <br />
+        <span class="opcion">4 </span
+        ><strong>proyección Mensual Estimada: </strong>Hace una proyección
+        mensual de todos los jugadores registrados dependiendo la forma de pago
+        que realizó. <br /> <br> <br>
+      </p>
+      <p>
+        <strong>1.- REGISTRAR NUEVO JUGADOR:</strong> <br />
 
-    </section>
-    <header>
-      <!-- place navbar here -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-        <div class="container">
-          <a class="navbar-brand" href="#">
-            <img src="./img/Logo.png" alt="maral logo" width="150px" height="auto">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Maral</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Nosotros</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Servicios</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Infraestructura</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Contacto</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <!-- main content -->
-    </main>
-    <footer>
-      <!-- place footer here -->
-    </footer>
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        Al escoger la opción 1, para registrar jugador aparece un prompt para
+        solicitar los datos del nuevo miembro con un formato en especial, los
+        datos separados por | son: <br />
+        <strong>a) Nombre</strong> <br />
+        <strong>b) Año de Nacimiento</strong> (determinará la categoría que le corresponde
+        nacidos entre 2004 y 2011)<br />
+        <strong>c) Rama</strong>; V o F como opciones, Varonil y Femenil respectivamente <br />
+        <strong>d) Plan de Pago</strong>; M, T, S, A como opciones, Mensual, Trimestral,
+        Semestral y Anual <br />
+
+        Por ejemplo, se tiene un joven con los siguientes Datos: <br />
+        Nombre: Julián Domínguez <br />
+        Año de Nacimiento: 2008 <br />
+        Rama: Varonil <br />
+        Plan de Pago: Trimestral <br />
+        La forma correcta de ingresar los datos sería (EJEMPLO): <br />
+        <span class="opcion">Julian Dominguez|2005|V|T</span> <br />
+        Al dar Enter o al hacer clic en el botón ok; se pregunta si está seguro
+        del registro o si lo cancela, como forma de validación. <br />
+        Una vez finalizado se agrega al array de objetos del padrón total de
+        jugadores. <br> <br /> <br>
+      </p>
+      <p>
+        <strong>2.- ARMAR EQUIPO</strong> <br>
+        En esta opción se podrá armar un equipo y seleccionar a los mejores jugadores y jugadoras de cada categoría por rama.
+        Aparecerá un Submenú en el que tendrá que elegir qué Equipo formar; <br> <br>
+        Se debe de ingresar: <br>
+        <span class="opcion">J&gt;V</span> - Para armar el equipo de Juvenil Mayor Varonil <br>
+        <span class="opcion">J&lt;V</span> - Para armar el equipo de Juvenil Menor Varonil <br>
+        <span class="opcion">J&gt;F</span> - Para armar el equipo de Juvenil Mayor Femenil <br>
+        <span class="opcion">J&lt;F</span> - Para armar el equipo de Juvenil Menor Femenil <br>
+        <span class="opcion">I&gt;V</span> - Para armar el equipo de Infantil Mayor Varonil <br>
+        <span class="opcion">I&lt;V</span> - Para armar el equipo de Infantil Menor Varonil <br>
+        <span class="opcion">I&gt;F</span> - Para armar el equipo de Infantil Mayor Femenil <br> 
+        <span class="opcion">I&lt;F</span> - Para armar el equipo de Infantil Menor Femenil <br> <br>
+
+        Al seleccionar una de estas opciones solo de podrá dar el nombre del jugador o jugadora que cumpla con la categoría y la rama seleccionada del padrón que se tiene o de los nuevos jugadores registrados. <br> <br>
+        Por ejemplo: <br>
+        Al escoger <span class="opcion">J>V</span> se pueden ingresar los nombres del arreglo como son: <br> <br>
+        <span class="opcion">ANGEL NIETO</span>  <br>
+        <span class="opcion">ARTURO PEREZ</span> <br>
+        <span class="opcion">JULIAN DOMINGUEZ</span> <br>
+        <span class="opcion">MISAEL GUTIERREZ</span>, etc. <br> <br>
+        Se puede ingresar tantos jugadores como se desee hasta teclear S para regresar al menú anterior. <br>
+        Al final de escoger se crea un array del equipo seleccionado con los integrantes del equipo <br> <br> <br>
+      </p>
+      <p>
+        <strong>3.- CONSULTAR PADRÓN DE JUGADOR:</strong> <br>
+        Al seleccionar esta opción aparece un submenú en el que se pregunta en qué forma se quiere hacer la búsqueda si por categoría, por forma de pago o ver el padrón completo, arrojara todos los objetos que cumplan con búsqueda deseada. <br> <br>
+        <span class="opcion">R</span> - Por rama; <br>
+        &nbsp;&nbsp;<span class="opcion">V</span> - Rama Varonil <br>
+        &nbsp;&nbsp;<span class="opcion">F</span> - Rama Femenil <br> <br>
+
+        <span class="opcion">C</span> - Por categoría <br>
+        &nbsp;&nbsp;<span class="opcion">J&gt;</span> - Juvenil Mayor <br>
+        &nbsp;&nbsp;<span class="opcion">J&lt;</span> - Juvenil Menor <br>
+        &nbsp;&nbsp;<span class="opcion">I&gt;</span> - Infantil Mayor <br>
+        &nbsp;&nbsp;<span class="opcion">I&lt;</span> - Infantil Menor <br> <br>
+
+        <span class="opcion">P</span> - Por plan de pago <br>
+	      &nbsp;&nbsp;<span class="opcion">M</span> - Mensual <br>
+	      &nbsp;&nbsp;<span class="opcion">T</span> - Trimestral <br>
+	      &nbsp;&nbsp;<span class="opcion">S</span> - Semestral <br>
+	      &nbsp;&nbsp;<span class="opcion">A</span> - Anual <br> <br>
+	
+        <span class="opcion">T</span> - Ver el total de jugadores del padrón <br> <br> <br>
+      </p>
+      <p>
+        <strong>4.- PROYECCIÓN MENSUAL ESTIMADA</strong> <br>
+        Arroja una proyección mensual estimada con respecto al plan de pago de los jugadores, si los jugadores determinaron pagar por Trimestre, Semestre o Año aplicara un descuento en cada uno de los planes, pero la información la presentara por mes, así que será la suma de lo que corresponde a todos los que hicieron el pago mensual, más el primer mes con descuento de los que pagaron por trimestre, más el primer mes con descuento de los que pagaron por semestre así también con los que hicieron el pago anual. <br> <br>
+        Pago Mensual: $ 1,500 MXN <br>
+        Pago Trimestral: $1,400 MXN costo por mes <br>
+        Pago Semestral: $1,250 MXN costo por mes <br>
+        Pago Anual: $1,100 MXN costo por mes <br> <br> <br>
+      </p>
+    </div>
   </body>
 </html>
