@@ -2,7 +2,7 @@
 
 let vJugadores = [];
 
-let botonJugadores = document.getElementById("btnJugadores"); 
+let botonJugadores = document.getElementById("btnJugadores");
 let botonEquipos = document.getElementById("btnEquipos");
 
 let botonRegresarJugador = document.getElementById("btnRegreJug");
@@ -50,17 +50,6 @@ async function definePadron() {
   showTable();
 }
 
-/* function definePadron() {
-	fetch("jugadores.json")
-		.then((response) => response.json())
-		.then((data) => {
-			console.log(data);
-			vJugadores = data;
-			localStorage.setItem("key", JSON.stringify(vJugadores));
-			showTable();
-		});
-} */
-
 //Boton; No empezar con Padron, ingresar registro de jugadores desde un arreglo vacio
 botonSinPadron.addEventListener("click", function () {
   document.getElementById("deseaPadron").style.display = "none";
@@ -96,28 +85,27 @@ document.getElementById("nombre").addEventListener("keyup", function (e) {
   }
 });
 botonGuardaJugador.addEventListener("click", function () {
-  //alert("Entra a guardar jugador");
   //agregar al arreglo de jugadores
   //agregar el jugador al local storage
-  let wRama = "";
+  let asignaRama = "";
   if (document.getElementById("ramaF").checked) {
-    wRama = "F";
+    asignaRama = "F";
   } else {
-    wRama = "V";
+    asignaRama = "V";
   }
-  let wNombre = document.getElementById("nombre").value.toUpperCase();
+  let asignaNombre = document.getElementById("nombre").value.toUpperCase();
   let oJug = {
-    nombre: wNombre,
-    rama: wRama,
+    nombre: asignaNombre,
+    rama: asignaRama,
     enEquipo: "🚫",
     posicion: "",
     numEquipo: "",
   };
-  let wMsg = document.getElementById("msg");
+  let muestraMensaje = document.getElementById("msg");
   if (oJug.nombre == "") {
-    wMsg.textContent = "... indique nombre";
+    muestraMensaje.textContent = "... indique nombre";
   } else {
-    wMsg.innerHTML = "&nbsp;";
+    muestraMensaje.innerHTML = "&nbsp;";
     vJugadores.push(oJug);
     //let xValue = JSON.stringify(vJugadores);
     localStorage.setItem("key", JSON.stringify(vJugadores));
@@ -162,8 +150,6 @@ function delJug(pNombre) {
         toast.show();
         break;
       } else {
-        //alert("No puede borrar un jugador estando en el equipo");
-        //document.getElementById("avisoBorrar").style.display = "block";
         borrarNopermitido();
       }
     }
@@ -253,12 +239,7 @@ function showTableFilter(pRama) {
 function seleccionDeJugador(pNombre) {
   for (let index = 0; index < vJugadores.length; index++) {
     if (vJugadores[index].nombre == pNombre) {
-      posicionJugador(index, pNombre,vJugadores[index].rama);
-      /* vJugadores[index].enEquipo = "S";
-			localStorage.setItem("key", JSON.stringify(vJugadores));
-			showTableFilter(vJugadores[index].rama);
-			const toast = new bootstrap.Toast(toastAltaEquipo);
-			toast.show(); */
+      posicionJugador(index, pNombre, vJugadores[index].rama);
       break;
     }
   }
