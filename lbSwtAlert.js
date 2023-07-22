@@ -44,7 +44,7 @@ async function numeroJugador(index, pNombre, position, pRama) {
     showCancelButton: true,
     inputValidator: (value) => {
       return new Promise((resolve) => {
-        if (value > 0 && value < 99) {
+        if (value > 0 && value < 100) {
           const searchIndex = vJugadores.findIndex(
             (jugador) => jugador.numEquipo == value && jugador.rama == pRama
           );
