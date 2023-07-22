@@ -2,252 +2,89 @@
 
 let vJugadores = [];
 
-let bJug = document.getElementById("btnJugadores");
-let bEqu = document.getElementById("btnEquipos");
+let botonJugadores = document.getElementById("btnJugadores"); 
+let botonEquipos = document.getElementById("btnEquipos");
 
-let bRegJug = document.getElementById("btnRegreJug");
-let bRegEqu = document.getElementById("btnRegreEqu");
+let botonRegresarJugador = document.getElementById("btnRegreJug");
+let botonRegresarEquipo = document.getElementById("btnRegreEqu");
 
-let bRamaFem = document.getElementById("btnRamaFem");
-let bRamaVar = document.getElementById("btnRamaVar");
+let botonRamaFemenil = document.getElementById("btnRamaFem");
+let botonRamaVaronil = document.getElementById("btnRamaVar");
 
-let bConPadron = document.getElementById("btnConPadron");
-let bSinPadron = document.getElementById("btnSinPadron");
+let botonConPadron = document.getElementById("btnConPadron");
+let botonSinPadron = document.getElementById("btnSinPadron");
 
-let btnGuardaJ = document.getElementById("btnGuardaJ");
+let botonGuardaJugador = document.getElementById("btnGuardaJ");
+
+const toastGuardaJugador = document.getElementById("nuevoJugadorToast");
+const toastEliminaJugador = document.getElementById("eliminaJugadorToast");
+const toastAltaEquipo = document.getElementById("altaEquipoToast");
+const toastBajaEquipo = document.getElementById("bajaEquipoToast");
 
 //Empieza con seccion para preguntar si desea jugadores predefinidos si es que no hay en localstorage
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("acabo de entrar");
-  let lsarr = localStorage.getItem("key");
-  if (lsarr == null) {
+  //console.log("acabo de entrar");
+  let localStgeArray = localStorage.getItem("key");
+  if (localStgeArray == null) {
     document.getElementById("deseaPadron").style.display = "block";
     document.getElementById("cuerpo").style.display = "none";
   } else {
-    vJugadores = JSON.parse(lsarr);
+    vJugadores = JSON.parse(localStgeArray);
     showTable();
   }
 });
 
 //Boton; si Empezar con Padron predefinido
-bConPadron.addEventListener("click", function () {
+botonConPadron.addEventListener("click", function () {
   document.getElementById("deseaPadron").style.display = "none";
   document.getElementById("cuerpo").style.display = "block";
-  vJugadores = [
-    {
-      nombre: "SAMUEL GARCIA",
-      rama: "V",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "ANGEL NIETO",
-      rama: "V",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "ADRIANA MENDOZA",
-      rama: "F",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "JESSICA SUAREZ",
-      rama: "F",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "ARTURO PEREZ",
-      rama: "V",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "DANILO ORTIZ",
-      rama: "V",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "MARA GONZALEZ",
-      rama: "F",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "LINDA ORTEGA",
-      rama: "F",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "MIRANDA RIOS",
-      rama: "F",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "MANUEL FERNANDEZ",
-      rama: "V",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "MISAEL GUTIERREZ",
-      rama: "V",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "IKER GARCIA",
-      rama: "V",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "REGINA SARABIA",
-      rama: "F",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "VALERIA MENDEZ",
-      rama: "F",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "ERNESTO BARRERA",
-      rama: "V",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "ITZEL ARROYO",
-      rama: "F",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "PABLO SOSA",
-      rama: "V",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "EMILIO LEON",
-      rama: "V",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "FATIMA HERNANDEZ",
-      rama: "F",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "NANCY BUENDIA",
-      rama: "F",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "SINUE MORALES",
-      rama: "V",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "VALENTINA JIMENEZ",
-      rama: "F",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "CAMILA URRIETA",
-      rama: "F",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "MARIANA FERNANDEZ",
-      rama: "F",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "URIEL VALENZUELA",
-      rama: "V",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "MARTIN OROZCO",
-      rama: "V",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "MONICA MONREAL",
-      rama: "F",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "EMIR SOLORZANO",
-      rama: "V",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "HUGO NIETO",
-      rama: "V",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "MICHAEL BUENROSTRO",
-      rama: "V",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "ANDREA HUERTA",
-      rama: "F",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "BENITO TORRES",
-      rama: "V",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "JULIETA MENDEZ",
-      rama: "F",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "DIANA RODRIGUEZ",
-      rama: "F",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "NURIA MARTINEZ",
-      rama: "F",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "ALBERTO FUENTES",
-      rama: "V",
-      enEquipo: "🚫",
-    },
-    {
-      nombre: "CARLOS DEL RIO",
-      rama: "V",
-      enEquipo: "🚫",
-    },
-  ];
-  localStorage.setItem("key", JSON.stringify(vJugadores));
-  showTable();
+  definePadron();
 });
 
+async function definePadron() {
+  const respuesta = await fetch("jugadores.json");
+  const data = await respuesta.json();
+  //console.log(data);
+  vJugadores = data;
+  localStorage.setItem("key", JSON.stringify(vJugadores));
+  showTable();
+}
+
+/* function definePadron() {
+	fetch("jugadores.json")
+		.then((response) => response.json())
+		.then((data) => {
+			console.log(data);
+			vJugadores = data;
+			localStorage.setItem("key", JSON.stringify(vJugadores));
+			showTable();
+		});
+} */
+
 //Boton; No empezar con Padron, ingresar registro de jugadores desde un arreglo vacio
-bSinPadron.addEventListener("click", function () {
+botonSinPadron.addEventListener("click", function () {
   document.getElementById("deseaPadron").style.display = "none";
   document.getElementById("cuerpo").style.display = "block";
 });
 
 //Botones opciones Jugadores o Equipo
-bJug.addEventListener("click", function () {
+botonJugadores.addEventListener("click", function () {
   document.getElementById("opciones").style.display = "none";
   document.getElementById("cJugadores").style.display = "block";
 });
 
-bEqu.addEventListener("click", function () {
+botonEquipos.addEventListener("click", function () {
   document.getElementById("opciones").style.display = "none";
   document.getElementById("cEquipos").style.display = "block";
 });
 
 //Botones regresar
-bRegJug.addEventListener("click", function () {
+botonRegresarJugador.addEventListener("click", function () {
   document.getElementById("opciones").style.display = "block";
   document.getElementById("cJugadores").style.display = "none";
 });
 
-bRegEqu.addEventListener("click", function () {
+botonRegresarEquipo.addEventListener("click", function () {
   document.getElementById("opciones").style.display = "block";
   document.getElementById("cEquipos").style.display = "none";
 });
@@ -258,7 +95,7 @@ document.getElementById("nombre").addEventListener("keyup", function (e) {
     document.getElementById("btnGuardaJ").click();
   }
 });
-btnGuardaJ.addEventListener("click", function () {
+botonGuardaJugador.addEventListener("click", function () {
   //alert("Entra a guardar jugador");
   //agregar al arreglo de jugadores
   //agregar el jugador al local storage
@@ -273,6 +110,8 @@ btnGuardaJ.addEventListener("click", function () {
     nombre: wNombre,
     rama: wRama,
     enEquipo: "🚫",
+    posicion: "",
+    numEquipo: "",
   };
   let wMsg = document.getElementById("msg");
   if (oJug.nombre == "") {
@@ -283,6 +122,8 @@ btnGuardaJ.addEventListener("click", function () {
     //let xValue = JSON.stringify(vJugadores);
     localStorage.setItem("key", JSON.stringify(vJugadores));
     showTable();
+    const toast = new bootstrap.Toast(toastGuardaJugador);
+    toast.show();
   }
 });
 
@@ -317,17 +158,20 @@ function delJug(pNombre) {
         localStorage.setItem("key", JSON.stringify(vJugadores));
         document.getElementById("avisoBorrar").style.display = "none";
         showTable();
+        const toast = new bootstrap.Toast(toastEliminaJugador);
+        toast.show();
         break;
       } else {
         //alert("No puede borrar un jugador estando en el equipo");
-        document.getElementById("avisoBorrar").style.display = "block";
+        //document.getElementById("avisoBorrar").style.display = "block";
+        borrarNopermitido();
       }
     }
   }
 }
 
 //Botones para escoger equipo Femenil o Varonil
-bRamaFem.addEventListener("click", function () {
+botonRamaFemenil.addEventListener("click", function () {
   //  filtraJugFem();
   document.getElementById("titEq").textContent =
     "Seleccionar Jugadores del Padrón";
@@ -341,7 +185,7 @@ bRamaFem.addEventListener("click", function () {
   showTableFilter("F");
 });
 
-bRamaVar.addEventListener("click", function () {
+botonRamaVaronil.addEventListener("click", function () {
   document.getElementById("titEq").textContent =
     "Seleccionar Jugadores del Padrón";
   document.getElementById("colEq").style.display = "block";
@@ -376,7 +220,7 @@ function showTableFilter(pRama) {
     let c2 = x.insertCell(1);
     c1.innerHTML = eJug["nombre"];
     c2.innerHTML =
-      '<a href="#" onclick="selecJug(' +
+      '<a href="#" onclick="seleccionDeJugador(' +
       "'" +
       eJug["nombre"] +
       "'" +
@@ -391,9 +235,13 @@ function showTableFilter(pRama) {
     let x = zz.insertRow(rowCount);
     let c1 = x.insertCell(0);
     let c2 = x.insertCell(1);
+    let c3 = x.insertCell(2);
+    let c4 = x.insertCell(3);
     c1.innerHTML = eJug["nombre"];
-    c2.innerHTML =
-      '<a href="#" onclick="bajaJug(' +
+    c2.innerHTML = eJug["posicion"];
+    c3.innerHTML = eJug["numEquipo"];
+    c4.innerHTML =
+      '<a href="#" onclick="bajaDeJugador(' +
       "'" +
       eJug["nombre"] +
       "'" +
@@ -402,24 +250,29 @@ function showTableFilter(pRama) {
 }
 
 //Funcion que selecciona jugador al equipo - modifica la propiedad enEquipo a S del vector vJugadores
-function selecJug(pNombre) {
+function seleccionDeJugador(pNombre) {
   for (let index = 0; index < vJugadores.length; index++) {
     if (vJugadores[index].nombre == pNombre) {
-      vJugadores[index].enEquipo = "S";
-      localStorage.setItem("key", JSON.stringify(vJugadores));
-      showTableFilter(vJugadores[index].rama);
+      posicionJugador(index, pNombre,vJugadores[index].rama);
+      /* vJugadores[index].enEquipo = "S";
+			localStorage.setItem("key", JSON.stringify(vJugadores));
+			showTableFilter(vJugadores[index].rama);
+			const toast = new bootstrap.Toast(toastAltaEquipo);
+			toast.show(); */
       break;
     }
   }
 }
 
 //Funcion que da de baja al jugador del equipo - modifica la propiedad enEquipo a "🚫" del vector vJugadores
-function bajaJug(pNombre) {
+function bajaDeJugador(pNombre) {
   for (let index = 0; index < vJugadores.length; index++) {
     if (vJugadores[index].nombre == pNombre) {
       vJugadores[index].enEquipo = "🚫";
       localStorage.setItem("key", JSON.stringify(vJugadores));
       showTableFilter(vJugadores[index].rama);
+      const toast = new bootstrap.Toast(toastBajaEquipo);
+      toast.show();
       break;
     }
   }

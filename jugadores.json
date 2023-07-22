@@ -1,0 +1,261 @@
+[
+  {
+    "nombre": "SAMUEL GARCIA",
+    "rama": "V",
+    "enEquipo": "✔️",
+    "posicion": "opuesto",
+    "numEquipo": "4"
+  },
+  {
+    "nombre": "ANGEL NIETO",
+    "rama": "V",
+    "enEquipo": "✔️",
+    "posicion": "banda",
+    "numEquipo": "1"
+  },
+  {
+    "nombre": "ADRIANA MENDOZA",
+    "rama": "F",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "JESSICA SUAREZ",
+    "rama": "F",
+    "enEquipo": "✔️",
+    "posicion": "colocador",
+    "numEquipo": "10"
+  },
+  {
+    "nombre": "ARTURO PEREZ",
+    "rama": "V",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "DANILO ORTIZ",
+    "rama": "V",
+    "enEquipo": "✔️",
+    "posicion": "banda",
+    "numEquipo": "9"
+  },
+  {
+    "nombre": "MARA GONZALEZ",
+    "rama": "F",
+    "enEquipo": "✔️",
+    "posicion": "libero",
+    "numEquipo": "5"
+  },
+  {
+    "nombre": "LINDA ORTEGA",
+    "rama": "F",
+    "enEquipo": "✔️",
+    "posicion": "central",
+    "numEquipo": "3"
+  },
+  {
+    "nombre": "MIRANDA RIOS",
+    "rama": "F",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "MANUEL FERNANDEZ",
+    "rama": "V",
+    "enEquipo": "✔️",
+    "posicion": "central",
+    "numEquipo": "8"
+  },
+  {
+    "nombre": "MISAEL GUTIERREZ",
+    "rama": "V",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "IKER GARCIA",
+    "rama": "V",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "REGINA SARABIA",
+    "rama": "F",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "VALERIA MENDEZ",
+    "rama": "F",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "ERNESTO BARRERA",
+    "rama": "V",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "ITZEL ARROYO",
+    "rama": "F",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "PABLO SOSA",
+    "rama": "V",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "EMILIO LEON",
+    "rama": "V",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "FATIMA HERNANDEZ",
+    "rama": "F",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "NANCY BUENDIA",
+    "rama": "F",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "SINUE MORALES",
+    "rama": "V",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "VALENTINA JIMENEZ",
+    "rama": "F",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "CAMILA URRIETA",
+    "rama": "F",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "MARIANA FERNANDEZ",
+    "rama": "F",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "URIEL VALENZUELA",
+    "rama": "V",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "MARTIN OROZCO",
+    "rama": "V",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "MONICA MONREAL",
+    "rama": "F",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "EMIR SOLORZANO",
+    "rama": "V",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "HUGO NIETO",
+    "rama": "V",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "MICHAEL BUENROSTRO",
+    "rama": "V",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "ANDREA HUERTA",
+    "rama": "F",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "BENITO TORRES",
+    "rama": "V",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "JULIETA MENDEZ",
+    "rama": "F",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "DIANA RODRIGUEZ",
+    "rama": "F",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "NURIA MARTINEZ",
+    "rama": "F",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "ALBERTO FUENTES",
+    "rama": "V",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  },
+  {
+    "nombre": "CARLOS DEL RIO",
+    "rama": "V",
+    "enEquipo": "🚫",
+    "posicion": "",
+    "numEquipo": ""
+  }
+]
